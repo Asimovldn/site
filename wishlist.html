@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist ASIMOV #21081 - Apoie Nossa Equipe</title>
+    <meta name="description" content="Lista de desejos de equipamentos e insumos da Equipe ASIMOV para apoiar via compras colaborativas.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wishlist-section { padding: 90px 0 60px 0; min-height: 100vh; background: linear-gradient(140deg,#f8f9fa,#e9ecef 100%); }
+        .wishlist-table { width: 100%; border-collapse: separate; border-spacing: 0 1.5rem; margin-top: 3rem; }
+        .wishlist-table th, .wishlist-table td { padding: 1.2rem; background: #fff; text-align: center; vertical-align: middle; border-radius: 1.1em; box-shadow: 0 4px 12px rgba(117,41,149,0.08); }
+        .wishlist-table th { color: #752995; font-size: 1.12rem; font-weight: 600; border-bottom: 3px solid #752995; }
+        .wishlist-table td img { height: 75px; border-radius: 12px; background: #f1f1f1; object-fit: contain; }
+        .wishlist-table tr:hover td { background: #f6eaff; }
+        .wishlist-table a { color: #752995; text-decoration: underline; transition:.2s; }
+        .wishlist-table a:hover { color: #000; }
+        .wishlist-title { text-align: center; color: #752995; font-size:2.3rem; margin-bottom:0.5rem; font-weight: 800; }
+        .wishlist-desc { text-align: center; color: #333; opacity: 0.85; font-size:1.18rem; margin-bottom:2.2rem; }
+        .wishlist-cta { text-align: center; margin: 3rem 0 0 0; color: #555; font-size:1.1rem; }
+        .wishlist-cta strong { color: #752995; }
+        @media (max-width: 768px) {
+            .wishlist-table th, .wishlist-table td { font-size: 0.98rem; padding: 0.6rem;}
+            .wishlist-title { font-size:1.5rem;}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">ASIMOV</span>
+                <span class="logo-number">#21081</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="historia.html" class="nav-link">Nossa História</a></li>
+                <li><a href="index.html#partnership" class="nav-link">Parcerias</a></li>
+                <li><a href="wishlist.html" class="nav-link active">Wishlist</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="wishlist-section">
+        <div class="container">
+            <h1 class="wishlist-title">Wishlist de Apoio & Itens Prioritários</h1>
+            <div class="wishlist-desc">
+                Empresas e pessoas podem contribuir diretamente comprando ou doando itens reais que vão potencializar nosso trabalho e participação nas competições.
+                <br>Para cada doação, incluiremos o apoio nos materiais da equipe, sempre com destaque igualitário!
+            </div>
+            <table class="wishlist-table">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Comprar/Doar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics"/></td>
+                        <td><strong>Controladora REV Robotics Expansion Hub</strong></td>
+                        <td>Cérebro central para automação e controle dos robôs FTC/OBR. Essencial para nossos protótipos.</td>
+                        <td><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo"/></td>
+                        <td><strong>Bateria LiPo 11.1V 3000-5000mAh</strong></td>
+                        <td>Bateria recarregável, proporciona autonomia aos robôs durante as competições.</td>
+                        <td><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/71CoJkNNq1L._AC_SL1500_.jpg" alt="Kit Ferramentas"/><td>
+                        <strong>Kit de Ferramentas de Precisão</strong></td>
+                        <td>Chaves, alicates e acessórios para montagem, manutenção e ajustes nos robôs.</td>
+                        <td><a href="https://www.amazon.com/s?k=precision+tool+kit" target="_blank">Ver opções</a></td>
+                    </tr>
+                    <!-- Adicione quantos itens desejar nessa tabela! -->
+                </tbody>
+            </table>
+            <div class="wishlist-cta">
+                📦 <strong>Quer doar outro equipamento?</strong> <br>
+                Envie um email para <a href="mailto:asimovldn@gmail.com">asimovldn@gmail.com</a>!<br>
+                <span style="opacity:.8;font-size:.95em;">*Após cada apoio recebemos o comprovante e agradecemos publicamente!</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Equipe ASIMOV #21081 • SESI de Referência Internacional - Londrina/PR</p>
+                    <p class="footer-tagline">"Cada peça doada acelera nossos sonhos!"</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
