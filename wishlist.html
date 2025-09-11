@@ -9,33 +9,68 @@
     <link rel="stylesheet" href="style.css">
     <style>
 
-        .styled-table {
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 0.9em;
-        font-family: sans-serif;
-        min-width: 400px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        .wishlist-table-wrapper {
+          max-height: 450px;
+          overflow-y: auto;
+          border-radius: 1em;
+          box-shadow: 0 8px 32px rgba(117,41,149,0.08);
         }
-        
-        .wishlist-section { padding: 90px 0 60px 0; min-height: 100vh; background: linear-gradient(140deg,#f8f9fa,#e9ecef 100%); }
-        .wishlist-table { width: 100%; border-collapse: separate; border-spacing: 0 1.5rem; margin-top: 3rem; }
-        .wishlist-table th, .wishlist-table td { padding: 1.2rem; background: #fff; text-align: center; vertical-align: middle; border-radius: 1.1em; box-shadow: 0 4px 12px rgba(117,41,149,0.08); }
-        .wishlist-table th { color: #752995; font-size: 1.12rem; font-weight: 600; border-bottom: 3px solid #752995; }
-        .wishlist-table td img { height: 75px; border-radius: 12px; background: #f1f1f1; object-fit: contain; }
-        .wishlist-table tr:hover td { background: #f6eaff; }
-        .wishlist-table a { color: #752995; text-decoration: underline; transition:.2s; }
-        .wishlist-table a:hover { color: #000; }
-        .wishlist-title { text-align: center; color: #752995; font-size:2.3rem; margin-bottom:0.5rem; font-weight: 800; }
-        .wishlist-desc { text-align: center; color: #333; opacity: 0.85; font-size:1.18rem; margin-bottom:2.2rem; }
-        .wishlist-cta { text-align: center; margin: 3rem 0 0 0; color: #555; font-size:1.1rem; }
-        .wishlist-cta strong { color: #752995; }
-        @media (max-width: 768px) {
-            .wishlist-table th, .wishlist-table td { font-size: 0.98rem; padding: 0.6rem;}
-            .wishlist-title { font-size:1.5rem;}
+        .wishlist-fixed {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          background: #fff;
+          font-family: 'Inter', sans-serif;
+        }
+        .wishlist-fixed th {
+          position: sticky;
+          top: 0;
+          background: #752995;
+          color: #fff;
+          font-weight: 700;
+          padding: 1.2em;
+          border-radius: 1.1em 1.1em 0 0;
+          letter-spacing: 0.04em;
+          font-size: 1.05em;
+          z-index: 2;
+          text-align: center;
+        }
+        .wishlist-fixed td {
+          text-align: center;
+          padding: 1.2em;
+          background: #fff;
+          border-radius: 0.8em;
+          box-shadow: 0 2px 10px rgba(117,41,149,0.08);
+          font-size: 0.97em;
+        }
+        .wishlist-fixed tbody tr {
+          transition: background .2s, color .2s;
+        }
+        .wishlist-fixed tbody tr:hover td {
+          background: #f1ebfa;
+          color: #752995;
+        }
+        .wishlist-fixed td img {
+          height: 60px;
+          border-radius: 10px;
+        }
+        .wishlist-fixed a {
+          color: #752995;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+        .wishlist-fixed a:hover {
+          color: #000;
+        }
+        @media (max-width: 700px) {
+          .wishlist-table-wrapper {max-height:none;}
+          .wishlist-fixed th, .wishlist-fixed td {font-size:0.92em;}
+          .wishlist-title { font-size:1.3rem;}
         }
     </style>
 </head>
+
+    
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -57,52 +92,43 @@
             </ul>
         </div>
     </nav>
-
-    <section class="wishlist-section">
-        <div class="container">
-            <h1 class="wishlist-title">Wishlist de Apoio & Itens Prioritários</h1>
-            <div class="wishlist-desc">
-                Empresas e pessoas podem contribuir diretamente comprando ou doando itens reais que vão potencializar nosso trabalho e participação nas competições.
-                <br>Para cada doação, incluiremos o apoio nos materiais da equipe, sempre com destaque igualitário!
-            </div>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Foto</th>
-                        <th>Nome</th>
-                        <th>Descrição</th>
-                        <th>Comprar/Doar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics"/></td>
-                        <td><strong>Controladora REV Robotics Expansion Hub</strong></td>
-                        <td>Cérebro central para automação e controle dos robôs FTC/OBR. Essencial para nossos protótipos.</td>
-                        <td><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo"/></td>
-                        <td><strong>Bateria LiPo 11.1V 3000-5000mAh</strong></td>
-                        <td>Bateria recarregável, proporciona autonomia aos robôs durante as competições.</td>
-                        <td><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://images-na.ssl-images-amazon.com/images/I/71CoJkNNq1L._AC_SL1500_.jpg" alt="Kit Ferramentas"/><td>
-                        <strong>Kit de Ferramentas de Precisão</strong></td>
-                        <td>Chaves, alicates e acessórios para montagem, manutenção e ajustes nos robôs.</td>
-                        <td><a href="https://www.amazon.com/s?k=precision+tool+kit" target="_blank">Ver opções</a></td>
-                    </tr>
-                    <!-- Adicione quantos itens desejar nessa tabela! -->
-                </tbody>
-            </table>
-            <div class="wishlist-cta">
-                📦 <strong>Quer doar outro equipamento?</strong> <br>
-                Envie um email para <a href="mailto:asimovldn@gmail.com">asimovldn@gmail.com</a>!<br>
-                <span style="opacity:.8;font-size:.95em;">*Após cada apoio recebemos o comprovante e agradecemos publicamente!</span>
-            </div>
+    
+        <section class="wishlist-section">
+      <div class="container">
+        <h1 class="wishlist-title">Wishlist de Apoio - ASIMOV</h1>
+        <div class="wishlist-desc">
+          Veja o que pode ajudar a equipe: patrocine, doe ou compre diretamente um dos itens abaixo!
         </div>
+        <div class="wishlist-table-wrapper">
+          <table class="wishlist-fixed">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Comprar/Doar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics" /></td>
+                <td>Controladora REV Robotics Expansion Hub</td>
+                <td>Cérebro central para automação e controle dos robôs FTC/OBR.</td>
+                <td><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
+              </tr>
+              <tr>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo" /></td>
+                <td>Bateria LiPo 11.1V 5000mAh</td>
+                <td>Bateria recarregável de alta autonomia para robôs.</td>
+                <td><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
+              </tr>
+              <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
+
 
     <footer class="footer">
         <div class="container">
@@ -118,4 +144,5 @@
     <script src="app.js"></script>
 </body>
 </html>
+
 
