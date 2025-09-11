@@ -8,6 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+
+        .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        
         .wishlist-section { padding: 90px 0 60px 0; min-height: 100vh; background: linear-gradient(140deg,#f8f9fa,#e9ecef 100%); }
         .wishlist-table { width: 100%; border-collapse: separate; border-spacing: 0 1.5rem; margin-top: 3rem; }
         .wishlist-table th, .wishlist-table td { padding: 1.2rem; background: #fff; text-align: center; vertical-align: middle; border-radius: 1.1em; box-shadow: 0 4px 12px rgba(117,41,149,0.08); }
@@ -55,7 +65,7 @@
                 Empresas e pessoas podem contribuir diretamente comprando ou doando itens reais que vão potencializar nosso trabalho e participação nas competições.
                 <br>Para cada doação, incluiremos o apoio nos materiais da equipe, sempre com destaque igualitário!
             </div>
-            <table class="wishlist-table">
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Foto</th>
@@ -108,3 +118,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+
