@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wishlist ASIMOV #21081 - Apoie Nossa Equipe</title>
-  <meta name="description" content="Lista de desejos de equipamentos e insumos da Equipe ASIMOV para apoiar via compras colaborativas.">
+  <meta name="description" content="Lista de equipamentos prioritários da Equipe ASIMOV #21081 para apoio e patrocínio.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -60,46 +59,26 @@
       color:#fff;
       font-weight:700;
       padding:1.2em;
-      border-radius:1.1em 1.1em 0 0;
+      border-radius:0;
       font-size:1.07em;
       letter-spacing:0.06em;
       text-align: center;
       z-index:2;
       border:0;
     }
-
-    /* Remove as bordas gerais das células */
-    .wishlist-fixed th, .wishlist-fixed td {
-        border-radius: 0;
-    }
-    
-    /* Arredonda só os cantos das abas extremas no cabeçalho */
-    .wishlist-fixed th.first-col {
-        border-top-left-radius: 1.1em;
-    }
-    .wishlist-fixed th.last-col {
-        border-top-right-radius: 1.1em;
-    }
-    /* Arredonda só os cantos das abas extremas no rodapé */
-    .wishlist-fixed td.first-col {
-        border-bottom-left-radius: 1em;
-    }
-    .wishlist-fixed td.last-col {
-        border-bottom-right-radius: 1em;
-    }
-    /* Mantém o restante retangular */
-
-    
-/*     .wishlist-fixed td {
+    .wishlist-fixed th.first-col { border-top-left-radius:1.1em; }
+    .wishlist-fixed th.last-col { border-top-right-radius:1.1em; }
+    .wishlist-fixed td {
       text-align:center;
       padding:1.1em;
       background:#fff;
-      border-radius:0.8em;
+      border-radius:0;
       box-shadow:0 2px 10px rgba(117,41,149,0.06);
       font-size:0.97em;
       border:0;
-    } */
-    
+    }
+    .wishlist-fixed td.first-col { border-bottom-left-radius:1em; }
+    .wishlist-fixed td.last-col { border-bottom-right-radius:1em; }
     .wishlist-fixed tbody tr {
       transition: background .18s, color .2s;
     }
@@ -109,10 +88,10 @@
     }
     .wishlist-fixed td img {
       height:64px;
-      border-radius:0px;
-/*       box-shadow:0 3px 10px rgba(117,41,149,0.08); */
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(117,41,149,0.08);
       object-fit:contain;
-/*       background:#f8f8f8; */
+      background:#f8f8f8;
       padding:5px;
     }
     .wishlist-fixed a {
@@ -124,7 +103,11 @@
     .wishlist-fixed a:hover {
       color:#000;
     }
-
+    .priority-icon {
+      font-size:1.65em;
+      filter:dropshadow(0 0 2px #752995);
+      vertical-align:middle;
+    }
     .wishlist-cta {
       text-align:center;
       margin:2.5rem 0 0 0;
@@ -164,6 +147,7 @@
       .nav-logo {font-size:1.15rem;}
       .wishlist-fixed th, .wishlist-fixed td {font-size:0.93em;padding:0.7em;}
       .wishlist-table-wrapper {max-height:none;}
+      .priority-icon {font-size:1.18em;}
     }
   </style>
 </head>
@@ -193,7 +177,8 @@
       <table class="wishlist-fixed">
         <thead>
           <tr>
-            <th class="first-col">Foto</th>
+            <th class="first-col">Prioridade</th>
+            <th>Foto</th>
             <th>Nome</th>
             <th>Descrição</th>
             <th class="last-col">Comprar/Doar</th>
@@ -201,24 +186,34 @@
         </thead>
         <tbody>
           <tr>
-            <td class="first-col"><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics"/></td>
-            <td>Teste de novo produto</td>
+            <td class="first-col"><span class="priority-icon">🔥</span></td>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics"/></td>
+            <td>Controladora REV Robotics Expansion Hub</td>
             <td>Cérebro central para automação e controle dos robôs FTC/OBR. Essencial para nossos protótipos.</td>
             <td class="last-col"><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
           </tr>
           <tr>
-            <td class="first-col"><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo"/></td>
+            <td class="first-col"><span class="priority-icon">⭐</span></td>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo"/></td>
             <td>Bateria LiPo 11.1V 5000mAh</td>
             <td>Bateria recarregável, proporciona autonomia aos robôs durante as competições.</td>
             <td class="last-col"><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
           </tr>
           <tr>
-            <td class="first-col"><img src="https://images-na.ssl-images-amazon.com/images/I/71CoJkNNq1L._AC_SL1500_.jpg" alt="Kit Ferramentas"/></td>
+            <td class="first-col"><span class="priority-icon">🔧</span></td>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/71CoJkNNq1L._AC_SL1500_.jpg" alt="Kit Ferramentas"/></td>
             <td>Kit de Ferramentas de Precisão</td>
             <td>Conjunto de chaves, alicates e acessórios para montagem e manutenção dos robôs.</td>
             <td class="last-col"><a href="https://www.amazon.com/s?k=precision+tool+kit" target="_blank">Ver opções</a></td>
           </tr>
-          <!-- Adicione mais itens conforme desejar! -->
+          <tr>
+            <td class="first-col"><span class="priority-icon">🧩</span></td>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/41bLw9K6vcL._AC_.jpg" alt="Sensor óptico"/></td>
+            <td>Sensor Óptico para Robótica</td>
+            <td>Detecta linhas e obstáculos, usado em desafios especiais.</td>
+            <td class="last-col"><a href="https://www.amazon.com/s?k=optical+sensor+robotics" target="_blank">Ver opções</a></td>
+          </tr>
+          <!-- Adicione quantos itens e níveis desejar! -->
         </tbody>
       </table>
     </div>
@@ -236,10 +231,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
