@@ -1,149 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist ASIMOV #21081 - Apoie Nossa Equipe</title>
-    <meta name="description" content="Lista de desejos de equipamentos e insumos da Equipe ASIMOV para apoiar via compras colaborativas.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist ASIMOV #21081 - Apoie Nossa Equipe</title>
+  <meta name="description" content="Lista de desejos de equipamentos e insumos da Equipe ASIMOV para apoiar via compras colaborativas.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-        .wishlist-table-wrapper {
-          max-height: 450px;
-          overflow-y: auto;
-          border-radius: 1em;
-          box-shadow: 0 8px 32px rgba(117,41,149,0.08);
-        }
-        .wishlist-fixed {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0;
-          background: #fff;
-          font-family: 'Inter', sans-serif;
-        }
-        .wishlist-fixed th {
-          position: sticky;
-          top: 0;
-          background: #752995;
-          color: #fff;
-          font-weight: 700;
-          padding: 1.2em;
-          border-radius: 1.1em 1.1em 0 0;
-          letter-spacing: 0.04em;
-          font-size: 1.05em;
-          z-index: 2;
-          text-align: center;
-        }
-        .wishlist-fixed td {
-          text-align: center;
-          padding: 1.2em;
-          background: #fff;
-          border-radius: 0.8em;
-          box-shadow: 0 2px 10px rgba(117,41,149,0.08);
-          font-size: 0.97em;
-        }
-        .wishlist-fixed tbody tr {
-          transition: background .2s, color .2s;
-        }
-        .wishlist-fixed tbody tr:hover td {
-          background: #f1ebfa;
-          color: #752995;
-        }
-        .wishlist-fixed td img {
-          height: 60px;
-          border-radius: 10px;
-        }
-        .wishlist-fixed a {
-          color: #752995;
-          text-decoration: underline;
-          font-weight: bold;
-        }
-        .wishlist-fixed a:hover {
-          color: #000;
-        }
-        @media (max-width: 700px) {
-          .wishlist-table-wrapper {max-height:none;}
-          .wishlist-fixed th, .wishlist-fixed td {font-size:0.92em;}
-          .wishlist-title { font-size:1.3rem;}
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      color: #232323;
+      margin:0;
+      padding:0;
+    }
+    .wishlist-section {
+      max-width:1100px;
+      margin: 0 auto;
+      padding: 110px 0 60px 0;
+      min-height:100vh;
+    }
+    .wishlist-title {
+      text-align:center;
+      color:#752995;
+      font-size:2.3rem;
+      font-weight:800;
+      margin-bottom:0.8rem;
+    }
+    .wishlist-desc {
+      text-align:center;
+      color:#333;
+      opacity:0.85;
+      font-size:1.18rem;
+      margin-bottom:2.2rem;
+      max-width:600px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .wishlist-table-wrapper {
+      max-height:460px;
+      overflow-y:auto;
+      border-radius:1em;
+      box-shadow:0 8px 32px rgba(117,41,149,0.09);
+      margin-bottom:2.5rem;
+      background:#fff;
+    }
+    .wishlist-fixed {
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      background:transparent;
+    }
+    .wishlist-fixed th {
+      position:sticky;
+      top:0;
+      background:#752995;
+      color:#fff;
+      font-weight:700;
+      padding:1.2em;
+      border-radius:1.1em 1.1em 0 0;
+      font-size:1.07em;
+      letter-spacing:0.06em;
+      text-align: center;
+      z-index:2;
+      border:0;
+    }
+    .wishlist-fixed td {
+      text-align:center;
+      padding:1.1em;
+      background:#fff;
+      border-radius:0.8em;
+      box-shadow:0 2px 10px rgba(117,41,149,0.06);
+      font-size:0.97em;
+      border:0;
+    }
+    .wishlist-fixed tbody tr {
+      transition: background .18s, color .2s;
+    }
+    .wishlist-fixed tbody tr:hover td {
+      background:#f6eaff;
+      color:#752995;
+    }
+    .wishlist-fixed td img {
+      height:64px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(117,41,149,0.08);
+      object-fit:contain;
+      background:#f8f8f8;
+      padding:5px;
+    }
+    .wishlist-fixed a {
+      color:#752995;
+      text-decoration:underline;
+      font-weight:600;
+      letter-spacing:0.01em;
+    }
+    .wishlist-fixed a:hover {
+      color:#000;
+    }
+
+    .wishlist-cta {
+      text-align:center;
+      margin:2.5rem 0 0 0;
+      color:#555;
+      font-size:1.09rem;
+    }
+    .wishlist-cta strong { color:#752995;}
+    .navbar {
+      position:fixed;top:0;left:0;right:0;
+      z-index:1000; background:#752995;
+      height:70px;
+    }
+    .nav-container {max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 18px;height:70px;}
+    .nav-logo {display:flex;align-items:center;gap:8px;color:#fff; font-weight:800;font-size:1.3rem;}
+    .logo-text {color:#fff;}
+    .logo-number {color:#fff;background:#5f1f7a;border-radius:6px;padding:0 7px;}
+    .nav-menu {display:flex;gap:2rem;list-style:none;}
+    .nav-link {color:#fff;text-decoration:none;font-weight:500;transition:.2s;position:relative;}
+    .nav-link.active, .nav-link:hover {color:#f6eaff;}
+    .footer {
+      padding: 3rem 0 1rem 0;
+      background: #752995;
+      color: #fff;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .footer-text {
+      opacity:0.85;
+      font-weight:400;
+      font-size:1.08em;
+    }
+    .footer-tagline {font-style:italic;opacity:0.7;margin-top:0.5rem;}
+    @media (max-width: 700px) {
+      .wishlist-section {padding:80px 0 40px 0;}
+      .wishlist-title {font-size:1.45rem;}
+      .nav-menu {gap:1.1rem;font-size:0.95em;}
+      .nav-logo {font-size:1.15rem;}
+      .wishlist-fixed th, .wishlist-fixed td {font-size:0.93em;padding:0.7em;}
+      .wishlist-table-wrapper {max-height:none;}
+    }
+  </style>
 </head>
-
-    
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">ASIMOV</span>
-                <span class="logo-number">#21081</span>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Início</a></li>
-                <li><a href="historia.html" class="nav-link">Nossa História</a></li>
-                <li><a href="index.html#partnership" class="nav-link">Parcerias</a></li>
-                <li><a href="wishlist.html" class="nav-link active">Wishlist</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-        <section class="wishlist-section">
-      <div class="container">
-        <h1 class="wishlist-title">Wishlist de Apoio - ASIMOV</h1>
-        <div class="wishlist-desc">
-          Veja o que pode ajudar a equipe: patrocine, doe ou compre diretamente um dos itens abaixo!
-        </div>
-        <div class="wishlist-table-wrapper">
-          <table class="wishlist-fixed">
-            <thead>
-              <tr>
-                <th>Foto</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Comprar/Doar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td>Controladora REV Robotics Expansion Hub</td>
-                <td>Cérebro central para automação e controle dos robôs FTC/OBR.</td>
-                <td><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
-              </tr>
-              <tr>
-                <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo" /></td>
-                <td>Bateria LiPo 11.1V 5000mAh</td>
-                <td>Bateria recarregável de alta autonomia para robôs.</td>
-                <td><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
-              </tr>
-              <!-- Adicione mais linhas conforme necessário -->
-            </tbody>
-          </table>
-        </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">ASIMOV</span>
+        <span class="logo-number">#21081</span>
       </div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Equipe ASIMOV #21081 • SESI de Referência Internacional - Londrina/PR</p>
-                    <p class="footer-tagline">"Cada peça doada acelera nossos sonhos!"</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li><a href="historia.html" class="nav-link">Nossa História</a></li>
+        <li><a href="index.html#partnership" class="nav-link">Parcerias</a></li>
+        <li><a href="wishlist.html" class="nav-link active">Wishlist</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="wishlist-section">
+    <h1 class="wishlist-title">Wishlist de Apoio & Itens Prioritários</h1>
+    <div class="wishlist-desc">
+      Empresas e pessoas podem contribuir diretamente comprando ou doando itens reais que vão potencializar nosso trabalho e participação nas competições.<br>
+      Para cada doação, incluiremos o apoio nos materiais da equipe, sempre com destaque igualitário!
+    </div>
+    <div class="wishlist-table-wrapper">
+      <table class="wishlist-fixed">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Comprar/Doar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL._AC_SL1500_.jpg" alt="Controladora REV Robotics"/></td>
+            <td>Controladora REV Robotics Expansion Hub</td>
+            <td>Cérebro central para automação e controle dos robôs FTC/OBR. Essencial para nossos protótipos.</td>
+            <td><a href="https://www.revrobotics.com/rev-31-1153/" target="_blank">Comprar</a></td>
+          </tr>
+          <tr>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/61l5BdJEv9L._AC_SL1500_.jpg" alt="Bateria LiPo"/></td>
+            <td>Bateria LiPo 11.1V 5000mAh</td>
+            <td>Bateria recarregável, proporciona autonomia aos robôs durante as competições.</td>
+            <td><a href="https://www.amazon.com/s?k=lipo+11.1v+5000mah" target="_blank">Visualizar</a></td>
+          </tr>
+          <tr>
+            <td><img src="https://images-na.ssl-images-amazon.com/images/I/71CoJkNNq1L._AC_SL1500_.jpg" alt="Kit Ferramentas"/></td>
+            <td>Kit de Ferramentas de Precisão</td>
+            <td>Conjunto de chaves, alicates e acessórios para montagem e manutenção dos robôs.</td>
+            <td><a href="https://www.amazon.com/s?k=precision+tool+kit" target="_blank">Ver opções</a></td>
+          </tr>
+          <!-- Adicione mais itens conforme desejar! -->
+        </tbody>
+      </table>
+    </div>
+    <div class="wishlist-cta">
+      📦 <strong>Quer doar outro equipamento?</strong><br>
+      Envie um email para <a href="mailto:asimovldn@gmail.com">asimovldn@gmail.com</a>!<br>
+      <span style="opacity:.8;font-size:.95em;">*Após cada apoio recebemos o comprovante e agradecemos publicamente!</span>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-text">
+      &copy; 2025 Equipe ASIMOV #21081 • SESI Londrina<br>
+      <span class="footer-tagline">"Cada peça doada acelera nossos sonhos!"</span>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
