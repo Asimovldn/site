@@ -694,6 +694,8 @@ body {
     font-size: 1.5rem;
 }
 
+
+
 /* === CALL TO ACTION PARCERIA === */
 .partnership-cta {
     background: var(--gradient-primary);
@@ -769,7 +771,7 @@ body {
  .horizontal-line {
    width: 100%; /* Full width of the div */
    height: 2px; /* Thickness of the line */
-   background-color: var(--gradient-primary); /* Line color */
+   background-color: black; /* Line color */
    position: absolute;
    top: 50%; /* Center the line vertically */
    left: 0;
